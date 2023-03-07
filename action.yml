@@ -1,0 +1,22 @@
+name: 'Increase Google Play Rollout Percentage'
+description: 'Increase the rollout percentage of an Android app on the Google Play Store'
+inputs:
+  applicationId:
+    description: 'The application ID of the Android app (e.g. com.example.myapp)'
+    required: true
+  track:
+    description: 'The Google Play track to update (e.g. production, beta, alpha)'
+    required: false
+    default: 'production'
+  serviceAccount:
+    description: 'The JSON credentials for the Google Play service account'
+    required: true
+  userFraction:
+    description: 'The percentage of new users to release the update to (e.g. 0.1 for 10%). Leave empty for automatic.'
+    required: false
+outputs:
+  rollout-status:
+    description: 'The updated rollout status of the Android app on the Google Play Store'
+runs:
+  using: 'node16'
+  main: 'index.js'
