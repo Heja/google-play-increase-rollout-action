@@ -44,7 +44,7 @@ The following rollout strategies are available:
 ## Example Usage
 
 ```yaml
-uses: actions/google-play-rollout@v1
+uses: heja/google-play-increase-rollout-action
 with:
   applicationId: com.example.myapp
   track: production
