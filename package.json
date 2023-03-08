@@ -1,9 +1,10 @@
 {
-  "name": "google-play-rollout-percentage-action",
+  "name": "google-play-increase-rollout-action",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "ncc build src/index.ts -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +13,9 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@googleapis/androidpublisher": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "typescript": "^4.9.5"
   }
 }
